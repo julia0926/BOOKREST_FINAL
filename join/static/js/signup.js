@@ -71,10 +71,10 @@ const checkPassword2 = () => {
 };
 
 const checkPassword = () => {
-  if (password.value.length >= 6) {
+  if (password.value.length >= 8) {
     successLight(password);
   } else {
-    errorRed(password, `비밀번호는 6자 이상이어야 합니다`);
+    errorRed(password, `비밀번호는 8자 이상이어야 하며 비밀번호는 모두 숫자일 수 없습니다.`);
   }
 };
 
@@ -107,8 +107,8 @@ const signInit = () => {
   checkbox.addEventListener("change", handleCheckboxForm);
 
   signupForm.addEventListener("submit", (e) => {
-    // e.preventDefault();
-    checkPassword(password, 1, 6);
+    e.preventDefault();
+    checkPassword(password, 1, 8);
     loadName();
     checkEmail(email);
     checkstudentID(studentID);

@@ -20,10 +20,10 @@ const setDefault = (input, check) => {
 };
 
 const checkPassword = () => {
-  if (password.value.length >= 6) {
+  if (password.value.length >= 8) {
     successLight(password);
   } else {
-    errorRed(password, `비밀번호는 6자 이상이어야 합니다`);
+    errorRed(password, `비밀번호는 8자 이상이어야 합니다`);
   }
 };
 
@@ -43,7 +43,7 @@ const signInit = () => {
 
   signinForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    checkPassword(password, 1, 6);
+    checkPassword(password, 1, 8);
     checkEmail(email);
   });
 };
