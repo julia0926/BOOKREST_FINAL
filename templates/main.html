@@ -1,0 +1,265 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/main.css'%}" />
+
+<div class="container">
+  <div class="container__slider">
+    <div class="blank"></div>
+    <div class="container__slider__smallBox">
+      <div class="container__slider__smallBox__countPeople">
+        <h2>1300명</h2>
+        <h5>number of users</h5>
+      </div>
+      <div class="container__slider__smallBox__donation">
+        <h2>300권</h2>
+        <h5>donated book</h5>
+      </div>
+      <div class="container__slider__smallBox__reservation">
+        <h2>124권</h2>
+        <h5>reservation</h5>
+      </div>
+    </div>
+    <img
+      class="container__slider__img js-container__slider__img"
+      src="{% static 'img/main4.png'%}"
+    />
+    <img
+      class="container__slider__img js-container__slider__img"
+      src="{% static 'img/main3.png'%}"
+    />
+    <img
+      class="container__slider__img js-container__slider__img"
+      src="{% static 'img/main2.png'%}"
+    />
+    <img
+      class="container__slider__img js-container__slider__img"
+      src="{% static 'img/main.png'%}"
+    />
+    <div class="blank"></div>
+  </div>
+</div>
+
+<div class="main__Tool">
+  <div class="main__Tool__book">
+    <div class="main__Tool__book__title">
+      <h2>이달의 책</h2>
+    </div>
+
+    <div class="main__Tool__book__list__tool">
+      <div class="main__Tool__book__list list1 js-scroll">
+        <div class="main__Tool__book__list__img">
+          <img src="{% static 'img/book3.jpg'%}" />
+        </div>
+        <a href="#"><h5>사융 | ALL</h5></a>
+        <h3>소크라테스 익스프레스</h3>
+      </div>
+
+      <div class="main__Tool__book__list list2 js-scroll">
+        <div class="main__Tool__book__list__img">
+          <img src="{% static 'img/book4.jpg'%}" />
+        </div>
+        <a href="#"><h5>IT | 소프트웨어</h5></a>
+        <h3>우리의 뇌는 어떻게 배우는가</h3>
+      </div>
+
+      <div class="main__Tool__book__list list3 js-scroll">
+        <div class="main__Tool__book__list__img">
+          <img src="{% static 'img/book1.jpg'%}" />
+        </div>
+        <a href="#"><h5>인문 | ALL</h5></a>
+        <h3>올바름이라는 착각</h3>
+      </div>
+
+      <div class="main__Tool__book__list list4 js-scroll">
+        <div class="main__Tool__book__list__img">
+          <img src="{% static 'img/book2.jpg'%}" />
+        </div>
+        <a href="#"><h5>전체 | ALL</h5></a>
+        <h3>모든 날에 모든 순간에 위로를 보낸다</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="main__Tool__category">
+    <div class="main__Tool__category__title">
+      <h2>{{major}} 이번 주 입고된 책</h2>
+    </div>
+
+    <div class="main__Tool__category__list">
+      
+      {% for book in book_list %}
+      <a class="link" href="{% url 'detail' book.id %}">
+      <div class="main__Tool__category__list__book">
+        <div class="main__Tool__book__list__category__img">
+          {% if book.image %}
+          <img src="{{ book.image }}" alt="" />
+          {% endif %}
+        </div>
+        <div class="main__Tool__category__scrollbar">
+          <div class="main__Tool__category__list__summary">
+            <h2 class="main__Tool__category__list__summary__title">
+              {{ book.title }}
+            </h2>
+
+            <h3 class="main__Tool__category__list__summary__category">
+              {{ book.department }}
+            </h3>
+
+            <h3 class="main__Tool__category__list__summary__author">
+              {{ book.author }}/{{ book.publisher }}
+            </h3>
+
+            <h4 class="main__Tool__category__list__summary__num">
+              재고 수 ({{ book.stock }})
+            </h4>
+          </div>
+        </div>
+      </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="main__Tool__category__list__page">
+      랜덤으로 표시됩니다.
+      <span>더 많은 책을 보고싶다면 <a href="{% url 'category' %}">더보기</a></span>
+    </div>
+  </div>
+
+  <div class="main__Tool__content__video">
+    <video
+      src="{% static 'img/bookrest_youtube.mp4'%}"
+      controls
+      id="video"
+      class="video"
+    ></video>
+
+    <div class="main__Tool__content__video__summary js-scroll">
+      <h2>BOOKREST</h2>
+      <h4>전공서적 대여 서비스, BOOKREST</h4>
+    </div>
+  </div>
+
+  <div class="fullscreen-bg">
+    <img src="{% static 'img/start.jpg'%}" />
+
+    <div class="main__Tool__start">
+      <h3>더 많은 서비스를 즐겨보세요</h3>
+      <p>회원가입 후 다양한 BOOKREST의 서비스를 이용해주세요</p>
+      <button> <a href="{% url 'sign_up' %}">Sign up</a></button>
+    </div>
+  </div>
+
+  <div class="main__Tool__developer">
+    <div class="main__Tool__developer__title">
+      <h3 class="main__Tool__developer__titleMS">BOOKREST DEVELOPER</h3>
+    </div>
+    <div class="main__Tool__developer__younglion js-scroll">
+      <div class="snip1368">
+        <img src="{% static 'img/jiin.jpg'%}" />
+        <h3>Kimjiin</h3>
+        <figcaption>
+          <div class="icons">
+            <a href="https://github.com/julia0926"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:julia128126@gmail.com"
+              ><i class="far fa-envelope"></i
+            ></a>
+            <a href="https://julia1281.tistory.com/"
+              ><i class="far fa-file"></i
+            ></a>
+          </div>
+        </figcaption>
+      </div>
+
+      <div class="snip1368">
+        <img src="{% static 'img/hasung.jpg'%}" />
+        <h3>Yuhasung</h3>
+        <figcaption>
+          <div class="icons">
+            <a href="https://github.com/hasungYu"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:dbgktjd@gmail.com"
+              ><i class="far fa-envelope"></i
+            ></a>
+            <a href="https://leopardcatstudio.tistory.com/"
+              ><i class="far fa-file"></i
+            ></a>
+          </div>
+        </figcaption>
+      </div>
+    </div>
+
+    <div class="main__Tool__developer__lion js-scroll">
+      <div class="snip1368">
+        <img src="{% static 'img/dahye.jpg'%}" />
+        <h3>Yundahye</h3>
+        <figcaption>
+          <div class="icons">
+            <a href="https://github.com/Rahdduru"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:pochi89@likelion.org"
+              ><i class="far fa-envelope"></i
+            ></a>
+            <a href="https://www.instagram.com/e_verything_do_/"><i class="far fa-file"></i></a>
+          </div>
+        </figcaption>
+      </div>
+
+      <div class="snip1368">
+        <img src="{% static 'img/sh.jpg'%}" />
+        <h3>Hanseulhee</h3>
+        <figcaption>
+          <div class="icons">
+            <a href="https://github.com/hanseulhee"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:3021062@gmail.com"
+              ><i class="far fa-envelope"></i
+            ></a>
+            <a href="https://velog.io/@seulhyi"><i class="far fa-file"></i></a>
+          </div>
+        </figcaption>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer__summaryTool">
+    <div class="footer__summaryTool__summary">
+      <h3 class="footer__summaryTool__summary__h3">BOOKREST</h3>
+
+      대표: 김지인, 유하성, 윤다혜, 한슬희
+      <br />
+      서울특별시 구로구 오류2동 연동로 320 (성공회대학교 구두인관 3층)
+    </div>
+    <div class="footer__summaryTool__operateTime">
+      <h3 class="footer__summaryTool__summary__h3">운영시간</h3>
+
+      월요일 ~ 목요일 &nbsp; 12:00 ~ 6:00
+      <br />
+      금요일 &nbsp; 12:00 ~ 4:00
+      <br />
+      주말 휴무
+
+      <br />
+      <br />
+      <br />
+
+      © 2021. BOOKREST Corp. All rights reserved.
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://kit.fontawesome.com/3492063fc3.js"
+  crossorigin="anonymous"
+></script>
+
+<script src="{% static 'js/slide.js'%}"></script>
+<script src="{% static 'js/scroll.js'%}"></script>
+<script src="{% static 'js/category.js '%}"></script>
+
+{% endblock %}

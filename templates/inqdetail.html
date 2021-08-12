@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<link rel="stylesheet" href="{% static 'css/noticeBase.css'%}" />
+<link rel="stylesheet" href="{% static 'css/inquiry.css'%}" />
+<link rel="stylesheet" href="{% static 'css/inqdetail.css'%}" />
+
+<div class="noticeTitle">
+  <h2>Inquiry</h2>
+</div>
+<div class="inquiry__editTool__Big">
+<div class="inquiry__editTool">
+<h2>{{inquiry.title}}</h2>
+<!-- <p>작성자 : <b>{{inquiry.last_name}} {{inquiry.first_name}}</b></p> -->
+<p>작성 시간 : {{inquiry.pub_date}}</p>
+{% for qtype in inquiry.qtype.all %}
+<p>문의 유형 : {{qtype.type}}</p>
+{% endfor %}
+<p>작성 내용 : {{inquiry.body}}</p>
+<div class="editDelete__button">
+<a href="{% url 'inqedit' inquiry.id %}">수정하기</a>
+<a href="{% url 'inqdelete' inquiry.id %}">삭제하기</a>
+</div>
+<hr>
+{% for answer in inquiry.answer.all %}
+<p>{{answer.text}}</p>
+{% endfor %}
+
+
+</div>
+</div>
+{% endblock %}

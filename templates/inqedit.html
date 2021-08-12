@@ -1,0 +1,69 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<link rel="stylesheet" href="{% static 'css/noticeBase.css'%}" />
+<link rel="stylesheet" href="{% static 'css/inquiry.css'%}" />
+<div class="noticeTitle">
+  <h2>Inquiry</h2>
+</div>
+<form method="POST">
+    
+  <div class="noticeTool__summaryBigTool">
+    <div class="noticeTool__summaryTool">
+      <div class="noticeTool__summaryTool__box js-inquiry noticeShowing">
+        <div class="noticeTool__summaryTool__box__title">
+          <h1>문의하기 수정</h1>
+        </div>
+        <div class="noticeTool__summaryTool__box__summary">
+          <form method="POST">
+            {% csrf_token %}<b>제목</b>
+            <input
+              type="text"
+              class="noticeTool__summaryTool__box__summary__inquirytitle"
+              id="id_title"
+              name="title"
+            />
+
+            <b>문의 유형</b>
+            <select
+              name="qtype"
+              required=""
+              id="id_qtype"
+              class="noticeTool__summaryTool__box__summary__select"
+            >
+
+              <option value="" style="text-align: center">
+                --문의 유형을 선택해주세요--
+              </option>
+              <option>반납</option>
+              <option>대여</option>
+              <option>연체</option>
+              <option>분실</option>
+              <option>훼손</option>
+              <option>이외 기타</option>
+            </select>
+
+            <b>내용</b>
+            <textarea
+              rows="6"
+              cols="40"
+              class="noticeTool__summaryTool__box__summary__textarea"
+              id="id_body"
+              name="body"
+            ></textarea>
+          
+
+            <button
+              type="submit"
+              class="noticeTool__summaryTool__box__summary__button"
+            >수정하기
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+</div>
+</form>
+
+
+{% endblock %}

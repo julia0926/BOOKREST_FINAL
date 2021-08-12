@@ -1,0 +1,247 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/mypage.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<div class="my_page_background">
+    <div class="mypage__title">
+        <h4>Mypage</h4>
+        </div>
+    <div class="user_info">
+        <h4 class="user_welcome">{{ user.username }}님 오늘도 즐겁고 행복한 하루 보내세요!</h4>
+    </div>
+
+    <div class="alarm">
+        <div class="alarm_info">
+            <h4 class="alarm_history">알림 내역</h4>
+        </div>
+
+        <div id="toc_content">
+            
+            <div class="alarm_list">
+                <span class="alarm_title">관리자</span>
+                <span class="alarm_text">대여하셨던 <b>"점프 투 파이썬"</b>이 7/31부로 반납처리 되었습니다.</span>
+            </div>
+            <div class="alarm_list">
+                <span class="alarm_title">관리자</span>
+                <span class="alarm_text">문의하신 질문의 답변이 완료되었습니다. 문의하기 페이지를 확인해주세요.</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="rental_book">
+        <div class="rental_book_info">
+            <h4 class="rental_list">대여 리스트</h4>
+        </div>
+        
+        <div class="rental_book_list">
+            
+            <div class="book_list">
+                <div class="book_img">
+                <img src="{% static 'img/mypagebook9.jpg'%}"/>
+                <br>
+                </div>
+                <div class="book_info">
+                    <span class="title">
+                        <h4 class="col_title">책제목</h4><br>인문학도, 개발자되다
+                    </span>
+                    <span class="rental_date">
+                        <h4 class="col_title">대여일</h4><br>2021/08/14
+                    </span>
+                    <span class="return_date">
+                        <h4 class="col_title">반납일</h4><br>2021/12/21
+                    </span>
+                    <span class="left_date">
+                        <h4 class="col_title">반납일까지 D-129일 남았습니다</h4>
+                    </span>
+                    <span class="return_button">
+                        <button class="return">반납하기</button>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="book_list">
+                <div class="book_img">
+                <img src="{% static 'img/mypagebook2.jpg'%}"/>
+                <br>
+                </div>
+                <div class="book_info">
+                    <span class="title">
+                        <h4 class="col_title">책제목</h4><br>민주주의의 수수께끼
+                    </span>
+                    <span class="rental_date">
+                        <h4 class="col_title">대여일</h4><br>2021/08/14
+                    </span>
+                    <span class="return_date">
+                        <h4 class="col_title">반납일</h4><br>2021/12/21
+                    </span>
+                    <span class="left_date">
+                        <h4 class="col_title">반납일까지 D-129일 남았습니다</h4>
+                    </span>
+                    <span class="return_button">
+                        <button class="return">반납하기</button>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="book_list">
+                <div class="book_img">
+                <img src="{% static 'img/mypagebook3.jpg'%}"/>
+                <br>
+                </div>
+                <div class="book_info">
+                    <span class="title">
+                        <h4 class="col_title">책제목</h4><br>토마토 BASIC RC
+                    </span>
+                    <span class="rental_date">
+                        <h4 class="col_title">대여일</h4><br>2021/08/14
+                    </span>
+                    <span class="return_date">
+                        <h4 class="col_title">반납일</h4><br>2021/12/21
+                    </span>
+                    <span class="left_date">
+                        <h4 class="col_title">반납일까지 D-129일 남았습니다</h4>
+                    </span>
+                    <span class="return_button">
+                        <button class="return">반납하기</button>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="book_list">
+                <div class="book_img">
+                <img src="{% static 'img/mypagebook4.jpg'%}"/>
+                <br>
+                </div>
+                <div class="book_info">
+                    <span class="title">
+                        <h4 class="col_title">책제목</h4><br>소비자행동론
+                    </span>
+                    <span class="rental_date">
+                        <h4 class="col_title">대여일</h4><br>2021/08/14
+                    </span>
+                    <span class="return_date">
+                        <h4 class="col_title">반납일</h4><br>2021/12/21
+                    </span>
+                    <span class="left_date">
+                        <h4 class="col_title">반납일까지 D-129일 남았습니다</h4>
+                    </span>
+                    <span class="return_button">
+                        <button class="return">반납하기</button>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="book_list">
+                <div class="book_img">
+                <img src="{% static 'img/mypagebook5.jpg'%}"/>
+                <br>
+                </div>
+                <div class="book_info">
+                    <span class="title">
+                        <h4 class="col_title">책제목</h4><br>쉽게 배우는 알고리즘
+                    </span>
+                    <span class="rental_date">
+                        <h4 class="col_title">대여일</h4><br>2021/08/14
+                    </span>
+                    <span class="return_date">
+                        <h4 class="col_title">반납일</h4><br>2021/12/21
+                    </span>
+                    <span class="left_date">
+                        <h4 class="col_title">반납일까지 D-129일 남았습니다</h4>
+                    </span>
+                    <span class="return_button">
+                        <button class="return">반납하기</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="star_book">
+            <div class="star_book_info">
+                <h4 class="star_list">관심 책 리스트</h4>
+            </div>
+
+            <div class="star_book_list">
+            <div class="star_book_background">
+                <div class="list_title">
+                    <span class="book_title">책이름</span>
+                    <span class="book_major">학부</span>
+                    <span class="book_author">저자</span>
+                    <span class="book_publisher">출판사</span>
+                    <span class="book_professor">교수님</span>
+                    <span class="book_class">수업명</span>
+                </div>
+
+                <div class="book_list">
+                    <span class="title">점프 투 파이썬</span>
+                    <span class="major">IT</span>
+                    <span class="author">박응용</span>
+                    <span class="publisher">영진닷컴</span>
+                    <span class="professor">홍은지</span>
+                    <span class="class">python</span>
+                    <span class="star_img"><img src="{% static 'img/star_onclick.png'%}"/></span>
+                </div>
+
+                <div class="book_list">
+                    <span class="title">단박에 한국사</span>
+                    <span class="major">인문</span>
+                    <span class="author">심용환</span>
+                    <span class="publisher">위즈덤하우스</span>
+                    <span class="professor">김용찬</span>
+                    <span class="class">디지털영상촬영Ⅰ</span>
+                    <span class="star_img"><img src="{% static 'img/star_onclick.png'%}"/></span>
+                </div>
+
+                <div class="book_list">
+                    <span class="title">사회복지조사론</span>
+                    <span class="major">사회</span>
+                    <span class="author">김태성</span>
+                    <span class="publisher">청목출판사</span>
+                    <span class="professor">정원오</span>
+                    <span class="class">사회복지조사론</span>
+                    <span class="star_img"><img src="{% static 'img/star_onclick.png'%}"/></span>
+                </div>
+
+                <div class="book_list">
+                    <span class="title">인공지능 이론 및 실제</span>
+                    <span class="major">IT</span>
+                    <span class="author">양기철</span>
+                    <span class="publisher">홍릉과학출판사</span>
+                    <span class="professor">김명철</span>
+                    <span class="class">인공지능</span>
+                    <span class="star_img"><img src="{% static 'img/star_onclick.png'%}"/></span>
+                </div>
+
+                <div class="book_list">
+                    <span class="title">소비자행동론</span>
+                    <span class="major">사회</span>
+                    <span class="author">김규배</span>
+                    <span class="publisher">박영사</span>
+                    <span class="professor">이상훈</span>
+                    <span class="class">소비자행동및소비자트랜드분석</span>
+                    <span class="star_img"><img src="{% static 'img/star_onclick.png'%}"/></span>
+                </div>
+                
+            </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+    <br><br><br><br><br>
+</div>
+
+<script src="{% static 'js/return_alert.js'%}"></script>
+<script src="{% static 'js/star_alert.js'%}"></script>
+
+{% endblock %}

@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+.background {
+  width: 100vw;
+  height: 1000px;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/*링크속성 없애기*/
+
+p {
+  all: unset;
+}
+
+hr {
+  border: 0px;
+  height: 1px;
+  background-color: #000000;
+}
+
+/*navbar 클릭시 색상*/
+.clicked {
+  background-color: #2dbe61;
+}
+
+.category {
+  width: 1000px;
+  padding-top: 20px;
+}
+
+.category_nav {
+  display: flex;
+}
+
+.category_nav > .item {
+  width: 200px;
+  line-height: 45px;
+  margin: 1px;
+  background-color: #808080;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  transition: all 0.2s;
+}
+#all,
+#get_all {
+  border-radius: 5px 0px 0px 5px;
+}
+#it,
+#get_it {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.category_nav > .item > button {
+  all: unset;
+  width: 100%;
+}
+
+/*처음 category 페이지 방문 시 전체보기에 초록색 배경 설정
+ #get_all{
+   background-color: #2DBE61;
+ }*/
+
+.category_nav > :hover {
+  cursor: pointer;
+  background-color: #2dbe61;
+}
+
+.category_search {
+  display: flex;
+  height: 30px;
+  margin-top: 10px;
+  border: 3px solid #808080;
+  background: #ffffff;
+  padding: 2px;
+}
+
+.category_search > .text_item {
+  flex-grow: 50;
+}
+
+.category_search > .button_item {
+  flex-grow: 3;
+}
+
+.category_search > .text_item > input {
+  font-size: 15px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  padding: 0px 10px;
+
+}
+
+.category_search > .button_item > button {
+  width: 100%;
+  height: 100%;
+  background: #808080;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  transition: all 0.1s;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+}
+
+.category_search > .button_item > :hover {
+  cursor: pointer;
+  background-color: #2dbe61;
+}
+
+.book_list {
+  width: 1000px;
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: auto;
+  gap: 45px;
+  margin-bottom: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.book_list > :hover {
+  box-shadow: 9px 9px 0 #2dbe61;
+  transition: all 0.5s;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 3px solid #000000;
+  box-shadow: 9px 9px 0 #bdccd4;
+  justify-content: space-between;
+  border-radius: 5px 5px 5px 5px;
+}
+.book > .link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.book > .link > .title > h2 {
+  all: unset;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+}
+
+.book_card {
+  display: grid;
+  grid-template-columns: 117px 163px;
+  grid-template-rows: min-content;
+}
+
+.book_card > .img_area > img {
+  width: 105px;
+  height: 148px;
+  border: 1px solid #000000;
+}
+
+.book_card_column {
+  display: flex;
+  flex-direction: column;
+  width: 157px;
+  font-size: 13px;
+}
+
+.book_card_column > span {
+  margin-top: 7px;
+}
+
+/*book card에서 카테고리 부분은 띄우지 않기 위함*/
+.book_card_column > .book_category {
+  margin-top: 0px;
+}
+.column_title {
+  all: unset;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.book_card_column > .book_button > button {
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+  background: #808080;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  height: 32px;
+  width: 80px;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.book_card_column > .book_button > button > a {
+  all: unset;
+}
+
+.book_card_column > .book_button > :hover {
+  background: #2dbe61;
+  cursor: pointer;
+}
+
+.page {
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.page > .page_move {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #2dbe61;
+}
+.page > .page_button > a {
+  all: unset;
+}
+.page > span {
+  color: #808080;
+}

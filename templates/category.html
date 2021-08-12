@@ -1,0 +1,92 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/category.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<div class="background">
+    <div class="category">
+        <form method="GET" action="{% url 'category' %}">
+
+        <div class="category_nav">
+            <div class="item" id="all"><button id="get_all">전체보기</button></div>
+            <div class="item" id="humanities"><button id="get_humanities" name="major" value="인문">인문</button></div>
+            <div class="item" id="society"><button id="get_society" name="major" value="사회">사회</button></div>
+            <div class="item" id="media_content"><button id="get_media_content" name="major" value="미컨">미컨</button></div>
+            <div class="item" id="it"><button id="get_it" name="major" value="IT">IT</button></div>
+        </div>    
+        
+            <div class="category_search">
+                <div class="text_item"><input type="text" placeholder="책 제목을 입력하세요." name="search" value="{{search}}"></div>
+                <div class="button_item"><button>검색</button></div>
+            </div>
+        </form>
+
+        <div class="book_list">
+            {% for book in book_list %}
+            
+            <div class="book">
+                <a class="link" href="{% url 'detail' book.id %}">
+
+                
+                <div class="title" id="title" name="title">
+                    <h2 >{{ book.title }}</h2>
+                    
+                </div>
+                <div class="book_middle">
+                    <hr>
+                <div class="book_card">
+                    <div class="img_area">
+                    {% if book.image %}
+                    <img src="{{ book.image }}" alt=""/>
+                    {% endif %}
+                    </div>
+                    <div class="book_card_column">
+                        <span class="book_category">
+                            <h4 class="column_title">카테고리</h4>
+                            <br><p class="department">{{ book.department }}</p>
+                        </span>
+                        <span class="book_author"><h4 class="column_title">저자</h4>&ensp;{{ book.author }}
+                        </span>
+                        <span class="book_publisher">
+                            <h4 class="column_title">출판사</h4>&ensp;{{ book.publisher }}
+                        </span>
+                        <span class="book_date">
+                            <h4 class="column_title">출간일</h4>&ensp;{{ book.pubdate }}
+                        </span class="book_left">
+                        <span class="book_date">
+                            <h4 class="column_title">재고</h4>&ensp;{{ book.stock }}
+                        </span class="book_left">
+                    </div>
+                </div>
+                </div>
+                
+
+            </a>
+            </div>
+            
+            {% endfor %}
+
+        </div>
+        
+        <div class="page">
+            {% if book_list.has_previous %}
+            <a href='?page={{book_list.previous_page_number}}&search={{search}}&major={{major}}' class="page_move">이전</a>
+          {% endif %}
+            <span>{{book_list.number}}</span>
+            <span>&ensp;/&ensp;</span>
+            <span>{{book_list.paginator.num_pages}}</span>
+          {% if book_list.has_next %}
+            <a href='?page={{book_list.next_page_number}}&search={{search}}&major={{major}}' class="page_move">다음</a>
+          {% endif %}
+        </div>
+    
+    
+    </div>
+</div>
+    <!--js 불러오기-->
+    <script src="{% static 'js/category.js '%}"></script>
+    <script src="{% static 'js/star.js '%}"></script>
+    
+{% endblock %}

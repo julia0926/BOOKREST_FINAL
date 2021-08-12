@@ -1,0 +1,137 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/vote.css'%}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<br /><br />
+<div class="background">
+    <div class="vote_explain">
+        <h4 class="explain">✅ 대여하고 싶은 이달의 책에 투표하세요 ✅</h4>
+        <p>투표를 통해 선정된 1위~5위까지의 책은 다음 달까지 5권씩 추가로 비치됩니다.</p>
+    </div>
+    <br>
+<div class="vote_page">
+    <div class="vote_page_element">
+      <div class="vote_search">
+        <div class="text_item">
+          <input type="text" placeholder="책 제목 입력" />
+        </div>
+        <div class="button_item"><button>검색</button></div>
+      </div>
+
+      <div class="vote_book_info">
+        <span class="book_ranking">순위</span>
+        <span class="book_title">책제목</span>
+        <span class="book_author">저자</span>
+        <span class="book_publisher">출판사</span>
+        <span class="book_votes">투표수</span>
+        <span class="book_voting">투표하기</span>
+      </div>
+
+      <div class="vote_ranking">
+        <span class="ranking">1</span>
+        <span class="title">점프 투 파이썬</span>
+        <span class="author">박응용</span>
+        <span class="publisher">영진닷컴</span>
+        <span class="votes_number">15</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open">
+            <img id="img" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+
+        <span class="ranking">2</span>
+        <span class="title">어서와 파이썬은 처음이지?</span>
+        <span class="author">천인국</span>
+        <span class="publisher">인피니티 북스</span>
+        <span class="votes_number">13</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open1">
+            <img id="img1" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+
+        <span class="ranking">3</span>
+        <span class="title">데이터베이스 이론 및 실습</span>
+        <span class="author">이용주</span>
+        <span class="publisher">홍릉과학출판사</span>
+        <span class="votes_number">12</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open2">
+            <img id="img2" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+
+        <span class="ranking">4</span>
+        <span class="title">쉽게 배우는 알고리즘</span>
+        <span class="author">문병로</span>
+        <span class="publisher">한빛아카데미</span>
+        <span class="votes_number">10</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open3">
+            <img id="img3" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+
+        <span class="ranking">5</span>
+        <span class="title">마담의크스 포토샵</span>
+        <span class="author">네모기획</span>
+        <span class="publisher">영진닷컴</span>
+        <span class="votes_number">9</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open4">
+            <img id="img4" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+
+        <span class="ranking">6</span>
+        <span class="title">민주주의 수수께끼</span>
+        <span class="author">존 던</span>
+        <span class="publisher">후마니타스</span>
+        <span class="votes_number">7</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open5">
+            <img id="img5" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+
+        <span class="ranking">7</span>
+        <span class="title">토마토 BASIC RC</span>
+        <span class="author">이미영</span>
+        <span class="publisher">NE능률</span>
+        <span class="votes_number">5</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open6">
+            <img id="img6" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+
+        <span class="ranking">8</span>
+        <span class="title">단박에 한국사</span>
+        <span class="author">심용환</span>
+        <span class="publisher">위즈덤하우스</span>
+        <span class="votes_number">4</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open7">
+            <img id="img7" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+
+        <span class="ranking">9</span>
+        <span class="title">소비자행동론</span>
+        <span class="author">김성영</span>
+        <span class="publisher"> 한국방송통신대학교</span>
+        <span class="votes_number">3</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open8">
+            <img id="img8" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+
+        <span class="ranking">10</span>
+        <span class="title">김윤상 공기업 경영학</span>
+        <span class="author">김윤상</span>
+        <span class="publisher">도서출판현</span>
+        <span class="votes_number">1</span>
+        <span class="votes_img"
+          ><button type="button" id="modal-open9">
+            <img id="img10" src="{% static 'img/unclick.png'%}" /></button
+        ></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/vote.js'%}"></script>
+
+{% endblock %}

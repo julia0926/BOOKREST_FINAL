@@ -1,0 +1,123 @@
+.noticeTool__summaryTool__box__summary__textarea {
+  margin-top: 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 20px 20px 2px;
+  width: 600px;
+  min-height: 330px;
+  background-color: rgba(230, 230, 230, 0.6);
+  border-radius: 7px;
+  border: 1px solid rgba(230, 230, 230, 0.7);
+  box-shadow: 0px 0px 6px rgba(44, 44, 44, 0.04);
+  overflow-x: hidden;
+  resize: none;
+}
+
+.noticeTool__summaryTool__box__summary__textarea:hover,
+.noticeTool__summaryTool__box__summary__title:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.noticeTool__summaryTool__box__summary__inquirytitle:focus,
+.noticeTool__summaryTool__box__summary__select:focus {
+  background-color: #fff;
+  border: 2px solid black;
+}
+
+.noticeTool__summaryTool__box__summary__textarea:focus {
+  background-color: #fff;
+}
+
+.noticeTool__summaryTool__box__summary__p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.noticeTool__summaryTool__box__summary__button {
+  all: unset;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  opacity: 0.8;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 600;
+  margin-right: 15px;
+  float: right;
+}
+
+.noticeTool__summaryTool__box__summary__button:hover {
+  cursor: pointer;
+  background-color: #bef31a;
+  color: #000;
+  transition: all 0.3s;
+}
+
+.noticeTool__summaryTool__box__summary__inquirytitle {
+  all: unset;
+  margin-top: 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 6px;
+  min-width: 440px;
+  min-height: 30px;
+  background-color: rgba(230, 230, 230, 0.6);
+  border-radius: 7px;
+  border: 1px solid rgba(230, 230, 230, 0.7);
+  box-shadow: 0px 0px 6px rgba(44, 44, 44, 0.04);
+  overflow-x: hidden;
+}
+
+.noticeTool__summaryTool__box__summary__select {
+  margin-top: 10px;
+  box-sizing: border-box;
+  background-color: rgba(230, 230, 230, 0.6);
+  border-radius: 7px;
+  border: 1px solid rgba(230, 230, 230, 0.7);
+  box-shadow: 0px 0px 6px rgba(44, 44, 44, 0.04);
+  width: 267px;
+  height: 42px;
+  border-radius: 4px;
+  font-weight: 100;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+}
+
+.noticeTool__summaryTool__box__summary__post {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 0px 0px 40px;
+  height: 50px;
+  background-color: rgba(230, 230, 230, 0.6);
+}
+
+
+.noticeTool__summaryTool__box__summary__post__preview {
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+
+
+
+.noticeTool__summaryTool__box__summary {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.noticeTool__summaryTool__box__summary__post > a{
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.inquiry_pubdate{
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 10px;
+}

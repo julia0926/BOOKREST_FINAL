@@ -1,0 +1,10 @@
+<h1>admin : inquiry list 페이지</h1>
+{% for inquiry in inquirys.all %}
+<p>문의 유형 : {{qtype.type}}</p>
+<p>{{inquiry.id}}.</p>
+<p><a href="{% url 'ansdetail' inquiry.id %}">{{inquiry.title}}</a></p>
+<p>{{inquiry.pub_date}}</p>
+<p>작성자 : <b>{{inquiry.last_name}} {{inquiry.first_name}}</b></p>
+<br>
+<p>작성 시간 : {{inquiry.pub_date}}</p>
+{% endfor %}

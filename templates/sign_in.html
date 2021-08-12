@@ -1,0 +1,72 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/sign_in.css'%}" />
+
+<form method="POST" action="{% url 'sign_in' %}" id="signinForm">
+  {% csrf_token %}
+  <div class="signinBoxTool">
+    <div class="signinBoxTool__signinBox">
+      <div class="signinBoxTool__signinBox__summary">
+        <div class="signinBoxTool__signinBox__summary__intro">
+          <h2>로그인</h2>
+          <h4>Welcome to BOOKREST</h4>
+        </div>
+        <div class="signinBoxTool__signinBox__form-control">
+          <div class="signinBoxTool__signinBox__form-control__title">
+            <span>이메일</span>
+          </div>
+          <input
+            type="text"
+            class="email input"
+            name="email"
+            placeholder="Enter Email"
+          />
+          <small>Error message</small>
+        </div>
+
+        <div class="signinBoxTool__signinBox__form-control">
+          <div class="signinBoxTool__signinBox__form-control__title">
+            <span>비밀번호</span>
+          </div>
+          <input
+            type="password"
+            class="password input"
+            placeholder="Enter password"
+            name="password"
+          />
+          <small>Error message</small>
+        </div>
+        <div class="signinBoxTool__signinBox__summary__checkbox">
+          <input type="checkbox" class="checkbox" id="" name="checkbox" />
+          <h4>계정 저장하기</h4>
+
+          <div class="signinBoxTool__signinBox__summary__checkbox__helpTool">
+            <img
+              class="
+                signinBoxTool__signinBox__summary__checkbox__helpTool__icon
+              "
+              src="https://img.icons8.com/material-two-tone/20/000000/help.png"
+            />
+            <span class="text"
+              >이 기기의 모든 사용자가 이 계정에 접근할 수 있습니다.</span
+            >
+          </div>
+        </div>
+
+        <button type="submit">로그인</button>
+
+        <div class="signinBoxTool__signinBox__summary__link">
+          <div class="signinBoxTool__signinBox__summary__link__signup">
+            <span>아직 계정이 없으신가요?</span>
+            <a href="{% url 'sign_up' %}">Sign up</a>
+          </div>
+          <div class="signinBoxTool__signinBox__summary__link__rule">
+            <span>BOOKREST 규정을 확인하세요.</span>
+            <a href="{% url 'noticeBase' %}">Click me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<script src="{% static 'js/signin.js' %}"></script>
+{% endblock %}

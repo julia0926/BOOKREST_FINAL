@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+/*링크속성 없애기*/
+
+.book {
+  width: 799px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.book_box {
+  width: 790px;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  box-shadow: 10px 10px #2dbe61;
+  display: grid;
+  grid-template-columns: 390px 410px;
+  padding-bottom: 25px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.book_box > img {
+  margin-top: 25px;
+  margin-left: 50px;
+  width: 300px;
+  max-height: 450px;
+  border: 1px solid #000000;
+}
+
+.book_detail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 365px;
+}
+
+.book_detail > .name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-weight: 600;
+}
+
+.book_detail > .book_info > hr {
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.8;
+}
+
+.book_detail > .book_info {
+  margin-top: 5px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  opacity: 0.8;
+}
+.book_detail > .book_info > span {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  opacity: 0.8;
+}
+.book_detail > .book_info > .star_img {
+  all: unset;
+  float: right;
+}
+.book_detail > .book_info > .star_img > img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.book_detail > span > .col_title {
+  all: unset;
+  font-family: "Noto Sans KR", sans-serif;
+  color: gray;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+span {
+  all: unset;
+  font-size: 15px;
+}
+
+.book_subject,
+.book_professor,
+.book_major,
+.book_date,
+.book_price,
+.book_star {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 80px 300px;
+}
+
+.book_rental > button {
+  float: right;
+  width: 100%;
+  height: 100%;
+  background: #808080;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 80px;
+  font-family: "Noto Sans KR", sans-serif;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.book_rental > :hover {
+  background: #2dbe61;
+  cursor: pointer;
+}
+
+.rental_button {
+  background-color: #888888;
+  color: #ffffff;
+  width: 80px;
+  border-radius: 5px 5px 5px 5px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 35px;
+  vertical-align: middle;
+  margin-top: 30px;
+
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.rental_button:hover {
+  background-color: #2dbe61;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.rental_finish {
+  background-color: #2dbe61;
+  color: #ffffff;
+  width: 80px;
+  border-radius: 5px 5px 5px 5px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 35px;
+  vertical-align: middle;
+  margin-top: 25px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.scrap_button {
+  float: right;
+}

@@ -1,0 +1,278 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<link rel="stylesheet" href="{% static 'css/noticeBase.css'%}" />
+
+<div class="noticeTitle">
+  <h2>Notice</h2>
+</div>
+
+<div class="noticeTool">
+  <div class="noticeTool__category">
+    <div class="noticeTool__category__title">BOOKREST 이용안내</div>
+    <div class="noticeTool__category__link">
+      <a class="js-introduceA js-noticeTool__category__link">BOOKREST란</a>
+      <a class="js-ruleA js-noticeTool__category__link">규정</a>
+      <a class="js-faqA js-noticeTool__category__link">자주 묻는 질문</a>
+      <a class="js-bookrestMapA js-noticeTool__category__link">오시는 길</a>
+    </div>
+  </div>
+
+  <div class="noticeTool__summaryBigTool">
+  <div class="noticeTool__summaryTool">
+    <div class="noticeTool__summaryTool__box js-introduce noticeShowing">
+      <div class="noticeTool__summaryTool__box__title">
+        <h1>BOOKREST란?</h1>
+      </div>
+      <div class="noticeTool__summaryTool__box__summary">
+        BOOKREST는 전공서적을 대여해주는 서비스입니다. 
+        매 학기마다 전공책을 새로 구매하시나요? 구매하셨다면 가격이 부담스럽지 않으셨나요?
+        
+        BOOKREST는 대학생의, 대학생에 의한, 대학생들을 위해 만들었습니다.
+        BOOK + FOREST = 전공서적을 무료로 쉽게 대여할 수 있는 공유의 숲이라는 뜻으로
+        저희 BOOKREST에서 쉽고 편하게 원하는 책을 대여하시길 바랍니다.
+
+
+        💡 모든 학과, 모든 학년, 모든 과목의 학기마다 필요한 <b>전공서적을 교내</b>에 여러권
+        비치하여 책 정보와 수업 정보까지 BOOKREST에서 확인 가능합니다. 
+
+        👊🏻 BOOKREST는 <b>대여비용이 무료</b>입니다. 
+        일부 보증금 제도를 통해 책의 분실 및 손상 규정에 따라 비용이 청구 될 수 있지만
+        대여기간과 규정을 잘 지킨다면 누구나 무료로 이용할 수 있습니다.
+
+
+
+      </div>
+      <div class="noticeTool__summaryTool__box__title">
+        <h1>BOOKREST 이용방법</h1>
+      </div>
+      <div class="noticeTool__summaryTool__box__summary">
+          1. BOOKREST에서 본인이 대여할 책을 찾아 예약합니다.
+
+          2. 예약일정에 맞게 성공회대 BOOKREST로 오시면 관리자를 통해 해당 책을 대여할 수 있습니다.
+
+          3. 반납일정에 맞게 성공회대 BOOKREST에 반납해주시면 반납처리가 완료됩니다.
+
+
+
+          예약현황 및 반납일정과 관련된 정보들은 마이페이지에서 확인 가능합니다.
+          자세한 규정과 위치는 Notice 페이지에서 보실 수 있습니다.
+
+        BOOKREST는 성공회대 학생들의 적극적이고 배려하는 활동을 기대합니다.
+        회대생들의 관심으로 모두가 함께할 수 있는 BOOKREST를 만들어가길 바랍니다. 🙂
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="noticeTool__summaryTool">
+    <div class="noticeTool__summaryTool__box js-rule">
+      <div class="noticeTool__summaryTool__box__title">
+        <h1>Rule</h1>
+      </div>
+      <div class="noticeTool__summaryTool__box__summary">
+<b>대여</b>
+
+BOOKREST는 성공회대학교 '~'에 위치하고 있습니다.
+월 ~ 금, 오후 1시 ~ 오후 6시까지 열려있습니다. <b>( 주말은 운영하지 않습니다. )</b>
+관리자 명찰을 달고 있는 저희에게 학번과 이름을 말씀해주시면 확인하고 대여해드립니다.  
+
+<b>Book</b>
+
+책의 종류와 재고는 BOOKREST 사이트에서 확인해주시면 됩니다.
+직접 오셔서 대여하려 하시면 이미 예약된 책들도 있어 어려우실 수 있습니다. 
+BOOKREST 사이트에서 미리 예약하시면 더 빠르고 쉽게 대여하실 수 있습니다. 
+
+<b>반납</b>
+
+대여한 책은 본인이 예약한 기간에 맞춰 성공회대학교 '~'에 반납해주시면 됩니다.
+와서 관리자분께 말씀해주시면 관리자가 확인하면 반납 처리가 됩니다.
+대여한 책의 반납 날짜 일주일 전에 알람이 가니 확인해주세요!
+
+<b>연체</b>
+
+연체 기간만큼 책 대여가 불가능합니다.
+
+한 달 연체 시
+해당 책의 반값을 지불 & 45일간 대여가 금지됩니다.
+3권 연체 시
+BOOKREST 서비스를 이용하실 수 없습니다.
+
+
+<b>분실 및 훼손</b>
+
+분실 & 악의적으로 훼손할 경우
+해당 책의 반값을 지불해야 합니다.
+
+훼손의 기준
+책에 필기는 안 됩니다. ( 이미 필기 되어있는 책은 정해진 규정에 맞게 관리자가 판단합니다. ) 
+
+
+<b style=" color: #991c16;">모두가 같이 사용하는 책입니다. 여러분들의 배려가 필요합니다.</b>
+<div class="rule__next">
+<img src="https://img.icons8.com/small/35/000000/circled-chevron-left.png"/>
+<img src="https://img.icons8.com/small/35/000000/circled-chevron-right.png"/>
+</div>
+      </div>
+    
+    </div>
+  </div>
+
+
+
+
+  <div class="noticeTool__summaryTool">
+    <div class="noticeTool__summaryTool__box js-rule2">
+      <div class="noticeTool__summaryTool__box__title">
+        <h1>Rule</h1>
+      </div>
+      <div class="noticeTool__summaryTool__box__summary">
+<b>예약</b>
+
+BOOKREST에서 책 예약을 할 때 날짜, 시간을 정해주시고 그 일정에 맞게 찾아와주시면 됩니다.
+예약 시간 변경 혹은 예약취소를 하려면 음 어떡하지? 
+ 
+
+<b>기부</b>
+
+BOOKREST는 전공 책을 기부받고 있습니다.
+기부를 하면 <b>예약권</b>을 드립니다.
+또한, 달마다 이달의 기부왕을 선정하여 소정의 상품을 드리고 있습니다.
+회대생 여러분의 많은 기부를 기다립니다. 🙂
+
+
+
+
+<b style=" color: #991c16;">모두가 같이 사용하는 책입니다. 여러분들의 배려가 필요합니다.</b>
+<div class="rule__next">
+<img src="https://img.icons8.com/small/35/000000/circled-chevron-left.png"/>
+<img src="https://img.icons8.com/small/35/000000/circled-chevron-right.png"/>
+</div>
+      </div>
+    
+    </div>
+  </div>
+
+
+
+
+  <div class="noticeTool__summaryTool">
+    <div class="noticeTool__summaryTool__box js-faq">
+      <div class="noticeTool__summaryTool__box__title">
+        <h1>자주 묻는 질문</h1>
+      </div>
+      <div class="noticeTool__summaryTool__box__summary">
+           <details>
+             <summary>한 사람당 몇 권까지 대여 가능한가요?</summary><div class="details__content">최대 3권까지 대여 가능합니다.</div>
+           </details>
+           <details>
+            <summary> 책을 어디서 대여, 반납 할 수 있나요?</summary><div class="details__content">학교 도서관에서 학생증 지참 후 대여 및 반납 가능합니다. </div>
+          </details>
+          <details>
+            <summary>대여기간은 얼마나 되나요?</summary><div class="details__content">한 학기동안 대여 가능합니다.</div>
+          </details>
+          <details>
+            <summary>반납기간은 언제까지인가요?</summary><div class="details__content">교내 전체 종강일 16시까지 반납해주세요.</div>
+          </details>
+          <details>
+            <summary>책에 필기 및 표시를 해도 되나요?</summary><div class="details__content">필기 및 표시 모두 불가능합니다. 
+              관리자가 필기, 표시가 되어있다고 판단되면 규정하에 일부 금액을 지불하실 수 있습니다. 
+              다음에 사용할 학생들을 위해 책에 표시는 삼가해주세요.</div>
+          </details>
+          <details>
+            <summary>책을 훼손시켰을 경우 어떻게 되나요?</summary><div class="details__content">관리자의 판단하에 최대 정가의 50% 지불해야 합니다.</div>
+          </details>
+          <details>
+            <summary>대여비용은 무료인가요?</summary><div class="details__content">네. 학생들을 위한 서비스로서 무료로 대여해드리고 있습니다.</div>
+          </details>
+          <details>
+            <summary>반납하지 않았을 경우 어떻게 되나요?</summary><div class="details__content">다음학기에 대여가 불가능하거나 미반납 전공서적의 정가의 80%를 지불해야합니다. (분실도 같은 경우로 처리됩니다)</div>
+          </details>
+          <details>
+            <summary>책을 기증해도 되나요?</summary><div class="details__content">수업에 사용된 전공 책 기증을 받고 있습니다. 많이 기증해주세요. 🙂</div>
+          </details>
+          <details>
+            <summary>책 리스트에 없는 전공서적을 빌리고 싶습니다.</summary><div class="details__content">이달의 책 페이지를 통해 많은 학생들이 필요한 책을 선정하고 있습니다. 해당 페이지를 통해 원하는 책을 투표해주세요.</div>
+          </details>
+    </div>
+
+
+
+
+
+
+
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="noticeTool__summaryTool">
+    <div class="noticeTool__summaryTool__box js-bookrestMap">
+      <div class="noticeTool__summaryTool__box__title">
+        <h1>오시는 길</h1>
+      </div>
+      <div class="noticeTool__summaryTool__box__summary">
+            <div class="map"></div>
+            <b>주소</b>
+            서울특별시 구로구 오류2동 연동로 320 성공회대학교 구두인관 2층
+
+            <b style="color: #006266;">지하철</b>
+
+            <b>온수역 2번 출구</b>
+            도보로 약 11분 거리
+
+            <b style="color: #A3CB38;">버스</b>
+
+            <b>구로 07</b>: 온수역 > 동진빌라.오정초등학교 > 유한공고.성공회대앞
+    
+            <b>57</b>: 온수남부역 > 유한공고.성공회대앞
+
+            <b>57-1</b>: 온수남부역 > 유한공고.성공회대앞
+
+            <b>52</b>: 온수남부 > 유한공고.성공회대앞
+
+            <b>660</b>: 온수역 > 우신고등학교 > 궁동청소년문화의집.구로검사소 > 연세중앙교회 > 서울가든빌라앞 > 유한공고.성공회대앞
+        
+
+    
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e25b436ff3c87216e31284abe86494c6&libraries=LIBRARY"></script>
+  <script>
+  const container = document.querySelector('.map');
+  const options = {
+      center: new kakao.maps.LatLng(37.48779388711603, 126.82514044863785),
+      level: 3 //지도의 레벨(확대, 축소 정도)
+    };
+  const map = new kakao.maps.Map(container, options);
+
+  const markerPosition  = new kakao.maps.LatLng(37.48829223509457, 126.82500137418384); 
+
+
+  const marker = new kakao.maps.Marker({
+    position: markerPosition
+  });
+
+
+  marker.setMap(map);
+
+
+  </script>
+
+
+<script src="{% static 'js/notice.js'%}"></script>
+
+{% endblock %}

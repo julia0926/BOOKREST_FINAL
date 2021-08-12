@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<link rel="stylesheet" href="{% static 'css/noticeBase.css'%}" />
+<link rel="stylesheet" href="{% static 'css/inquiry.css'%}" />
+<div class="noticeTitle">
+  <h2>Inquiry</h2>
+</div>
+
+<div class="noticeTool">
+  <div class="noticeTool__category">
+    <div class="noticeTool__category__title">BOOKREST 문의하기</div>
+    <div class="noticeTool__category__link">
+      <a
+      class="js-inquiryListA js-noticeTool__category__link"
+      href="{% url 'inquiry' %}"
+      >내 문의 목록</a
+    >
+      <a
+        class="js-inquiryA js-noticeTool__category__link"
+        href="{% url 'ask' %}"
+        >문의하기</a
+      >
+    </div>
+  </div>
+  <div class="noticeTool__summaryBigTool">
+    <div class="noticeTool__summaryTool">
+      <div class="noticeTool__summaryTool__box js-inquiryList noticeShowing">
+        <div class="noticeTool__summaryTool__box__title">
+          <h1>내 문의 목록</h1>
+        </div>
+        <div class="noticeTool__summaryTool__box__summary">
+          <span class="noticeTool__summaryTool__box__summary__span">전체</span>
+          {% for inquiry in inquirys.all %}
+          <div class="noticeTool__summaryTool__box__summary__post">
+            <a href="{% url 'inqdetail' inquiry.id %}">  <div class="noticeTool__summaryTool__box__summary__post__preview">{{inquiry.id}}. {{inquiry.title}} <span class="inquiry_pubdate">{{inquiry.pub_date}}</span>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

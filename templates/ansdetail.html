@@ -1,0 +1,22 @@
+<h1>admin : inquiry answer 페이지</h1>
+<hr>
+<h2>{{inquiry.title}}</h2>
+<p>작성자 : <b>{{inquiry.last_name}} {{inquiry.first_name}}</b></p>
+<p>작성자 전화번호 : <b>{{inquiry.phone_number}}</b></p>
+<p>작성자 이메일 : <b>{{inquiry.email}}</b></p>
+<br>
+<p>작성 시간 : {{inquiry.pub_date}}</p>
+{% for qtype in inquiry.qtype.all %}
+<p>문의 유형 : {{qtype.type}}</p>
+{% endfor %}
+<p>작성 내용 : {{inquiry.body}}</p>
+<a href="{% url 'inqdelete' inquiry.id %}">삭제하기</a>
+<hr>
+{% for answer in inquiry.answer.all %}
+<p>{{answer.text}}</p>
+{% endfor %}
+<form method="POST">
+    {% csrf_token %}
+    <p>{{form.as_p}}</p>
+    <input type="submit" value="답변작성">
+</form>
