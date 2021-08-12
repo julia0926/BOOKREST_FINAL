@@ -107,7 +107,7 @@ const signInit = () => {
   checkbox.addEventListener("change", handleCheckboxForm);
 
   signupForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     checkPassword(password, 1, 8);
     loadName();
     checkEmail(email);
