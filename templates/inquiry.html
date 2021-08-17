@@ -32,7 +32,7 @@
           <span class="noticeTool__summaryTool__box__summary__span">전체</span>
           {% for inquiry in inquirys.all %}
           <div class="noticeTool__summaryTool__box__summary__post">
-            <a href="{% url 'inqdetail' inquiry.id %}">  <div class="noticeTool__summaryTool__box__summary__post__preview">{{inquiry.id}}. {{inquiry.title}} <span class="inquiry_pubdate">{{inquiry.pub_date}}</span>
+            <a href="{% url 'inqdetail' inquiry.id %}">  <div class="noticeTool__summaryTool__box__summary__post__preview">{{inquiry.title}} <span class="inquiry_pubdate">{{inquiry.pub_date}}</span>
               </div>
             </a>
           </div>
